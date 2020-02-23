@@ -17,8 +17,48 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 /* Remove margins from "page content" on small screens */
 @media only screen and (max-width: 600px) {#main {margin-left: 0}}
 
+	 /* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+} 
+	
+	
 </style>
 <body class="w3-black">
+	
 
 <!-- Icon Bar (Sidebar - hidden on small screens) -->
 <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
@@ -103,10 +143,10 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
       </div>
     </div>
 
- <!--   <button class="w3-button w3-light-grey w3-padding-large w3-section">
+   <button class="w3-button w3-light-grey w3-padding-large w3-section" id="myBtn">
       <i class="fa fa-download"></i> Download Resume
-    </button> -->
-    
+    </button> 
+   
     <!-- Grid for pricing tables --
     <h3 class="w3-padding-16 w3-text-light-grey">My Price</h3>
     <div class="w3-row-padding" style="margin:0 -16px">
@@ -156,9 +196,24 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     <p><span class="w3-large w3-margin-right">Rebecca Flex.</span> CEO at Company.</p>
     <p>No one is better than Jane Doe.</p> -->
   <!-- End About Section --> 
+	  
+	 
+	 
 	  <div class="LI-profile-badge" data-version="v1" data-size="large" data-locale="en_US" data-type="horizontal" data-theme="dark"
 	   data-vanity="emily--wright"><a class="LI-simple-link" href="https://www.linkedin.com/in/emily--wright?trk=profile-badge">Emily Wright's LinkedIn</a></div>
 	
+	  
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>Why do you want it? <a href="mailto:emilywright026@gmail.com"> Email Me! </a></p>
+  </div>
+
+</div>
   </div>
  
   <!-- Portfolio Section -->
@@ -214,8 +269,8 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
   <source src="mov_bbb.ogg" type="video/ogg">
   Your browser does not support HTML5 video.
 </video> -->
-      
-	   <!-- <video width="100%" controls>
+     
+		  <!-- <video width="100%" controls>
            <source src="Gymnastics.mp4" type="video/mp4">
            <!--  <source src="mov_bbb.ogg" type="video/ogg"> -->
           <!-- Your browser does not support HTML5 video. </video> -->
@@ -279,16 +334,15 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
   <source src="mov_bbb.ogg" type="video/ogg">
   Your browser does not support HTML5 video.
 </video> -->
-	      
-	    <iframe width="100%" height="270" src="https://www.youtube-nocookie.com/embed/LLW1PyCuppk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
+		  <iframe width="100%" height="270" src="https://www.youtube-nocookie.com/embed/LLW1PyCuppk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
         mozallowfullscreen="mozallowfullscreen" 
         msallowfullscreen="msallowfullscreen" 
         oallowfullscreen="oallowfullscreen" 
         webkitallowfullscreen="webkitallowfullscreen"></iframe>
 		  <h4> Late 2018 </h4>
 		  <h5 class="w3-text-deep-purple">Writer, Director, Producer, Editor</h5>
-<h6> A trailer for the columbine gymnastics feature video. This aired on CHS's internal news network. </h6>    
-	      
+<h6> A trailer for the columbine gymnastics feature video. This aired on CHS's internal news network. </h6>
+		
       </div>
     <!-- End video grid -->
     </div>
@@ -337,5 +391,32 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 <!-- END PAGE CONTENT -->
 </div>
 <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+	<script>
+	// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the button, open the modal
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+} 
+	</script>
 </body>
 </html>
