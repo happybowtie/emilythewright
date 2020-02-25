@@ -57,7 +57,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 	
 	
 </style>
-<body class="w3-black">
+<body class="w3-black" onload="document.myform.reset();">
 	
 
 <!-- Icon Bar (Sidebar - hidden on small screens) -->
@@ -379,20 +379,21 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
       <p><i class="fa fa-phone fa-fw w3-text-deep-purple w3-xxlarge w3-margin-right"></i> Phone: +1 720.891.6202</p>
       <p><i class="fa fa-envelope fa-fw w3-text-deep-purple w3-xxlarge w3-margin-right"> </i> Email: emilywright026@gmail.com</p>
     </div><br>
-  <!--  <p>Lets get in touch. Send me a message:</p>
+  <p>Lets get in touch. Send me a message:</p>
 
-    <form name="contact" action="Sendmeanemail.php" target="_self" method="post" >
+    <form name="myform" action="https://formspree.io/mqkbpryj" method="POST" autocomplete="off">
       <p><input class="w3-input w3-padding-16" type="text" placeholder="Name" required name="Name"></p>
       <p><input class="w3-input w3-padding-16" type="email" placeholder="Email" required name="Email"></p>
 	  <p><input class="w3-input w3-padding-16" type="text" name="Phone" placeholder="Phone" maxlength="10"></p>
       <p><input class="w3-input w3-padding-16" type="text" placeholder="Subject" required name="Subject"></p>
       <p><input class="w3-input w3-padding-16" type="text" placeholder="Message" required name="Message"></p>
       <p>
-        <button class="w3-button w3-light-grey w3-padding-large" type="submit" >
+        <button class="w3-button w3-light-grey w3-padding-large" type="submit"  >
           <i class="fa fa-paper-plane"></i> SEND MESSAGE
         </button>
       </p>
     </form>
+	  
   <!-- End Contact Section --> 
   </div>
 
