@@ -201,7 +201,9 @@ I'm a filmmaker from Denver, Colorado.
 
     <!-- Grid for photos -->
    <div class="w3-row-padding" style="margin:0 -16px">
-      <div class="slideshow-container w3-half" data-cycle="2000">
+	   <div>
+		   <h4> Awards</h4>
+      <div class="slideshow-container " data-cycle="2000">
 	
   <img class="mySlides" src="cfswin.png" style="width:100%">
   <img class="mySlides" src="cfsnom.png" style="width:100%">
@@ -209,15 +211,16 @@ I'm a filmmaker from Denver, Colorado.
   <img class="mySlides" src="DUFF" style="width:100%">
 </div>
  
-    
-	    
-      <div  class="slideshow-container w3-half" data-cycle="3000">
+    <div class= w3-half">
+	  <h4> Behind the Scenes </h4>  
+      <div  class="slideshow-container" data-cycle="3000">
 	   
   <img class="mySlides" src="visposter@0.5x.jpg" style="width:100%">
   <img class="mySlides" src="cfsnom.png" style="width:100%">
   <img class="mySlides" src="DIFF" style="width:100%">
   <img class="mySlides" src="DUFF" style="width:100%">
 </div>
+    </div>
    </div>
       </div>
 <script>
@@ -251,6 +254,68 @@ function showSlides(slides, slideIndex, cycle) {
         showSlides(slides, slideIndex, cycle)
     }, cycle);
 };
+</script>
+
+				<div class="w3-content w3-display-container">
+
+<div class="w3-display-container mySlides artdirection">
+  <img src="DUFF" style="width:100%">
+  <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+    French Alps
+  </div>
+</div>
+
+<div class="w3-display-container mySlides artdirection">
+  <img src="img_lights.jpg" style="width:100%">
+  <div class="w3-display-bottomright w3-large w3-container w3-padding-16 w3-black">
+    A knife with a cardboard blade
+  </div>
+</div>
+
+<div class="w3-display-container mySlides artdirection">
+  <img src="DIFF" style="width:100%">
+  <div class="w3-display-topleft w3-large w3-container w3-padding-16 w3-black">
+  A pumpkin head made of spray foam 
+  </div>
+</div>
+
+<div class="w3-display-container mySlides artdirection">
+  <img src="img_forest.jpg" style="width:100%">
+  <div class="w3-display-topright w3-large w3-container w3-padding-16 w3-black">
+   breakable sugar glass
+  </div>
+</div>
+
+<div class="w3-display-container mySlides artdirection">
+  <img src="img_mountains.jpg" style="width:100%">
+  <div class="w3-display-middle w3-large w3-container w3-padding-16 w3-black">
+    Mountains!
+  </div>
+</div>
+
+<button class="w3-button w3-display-left w3-black" onclick="plusDivs(-1)">&#10094;</button>
+<button class="w3-button w3-display-right w3-black" onclick="plusDivs(1)">&#10095;</button>
+
+</div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("artdirection");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
 </script>
 
 	  
