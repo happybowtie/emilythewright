@@ -196,8 +196,8 @@ I'm a filmmaker from Denver, Colorado.
       </div>
     </div> --> 
 	  		<div class="w3-padding-64 w3-content" >
-    <h2 class="w3-text-deep-purple">Awards</h2>
-    <hr style="width:200px" class="w3-opacity">
+
+    
 
     <!-- Grid for photos -->
    <div class="w3-row-padding" style="margin:0 -16px">
@@ -227,7 +227,7 @@ carousel();
 
 function carousel() {
   var i;
-  var x = document.getElementsByClassName("mySlides1");
+  var x = document.getElementsByClassName("mySlides1", "mySlides2");
   for (i = 0; i < x.length; i++) {
     x[i].style.display = "none";  
   }
@@ -237,22 +237,7 @@ function carousel() {
   setTimeout(carousel, 2000); // Change image every 2 seconds
 }
 </script>
-	  <script>
-var yourIndex = 0;
-carousel();
 
-function carousel() {
-  var i;
-  var x = document.getElementsByClassName("mySlides2");
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";  
-  }
-  yourIndex++;
-  if (yourIndex > x.length) {yourIndex = 1}    
-  x[yourIndex-1].style.display = "block";  
-  setTimeout(carousel, 2000); // Change image every 2 seconds
-}
-</script>
 	  
    <button class="w3-button w3-light-grey w3-padding-large w3-section" id="myBtn">
       <i class="fa fa-download"></i> Download Resume
