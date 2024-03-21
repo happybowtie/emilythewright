@@ -238,7 +238,7 @@ function carousel() {
 }
 </script>
 	  <script>
-var myIndex = 0;
+var yourIndex = 0;
 carousel();
 
 function carousel() {
@@ -247,9 +247,9 @@ function carousel() {
   for (i = 0; i < x.length; i++) {
     x[i].style.display = "none";  
   }
-  myIndex++;
-  if (myIndex > x.length) {myIndex = 1}    
-  x[myIndex-1].style.display = "block";  
+  yourIndex++;
+  if (yourIndex > x.length) {yourIndex = 1}    
+  x[yourIndex-1].style.display = "block";  
   setTimeout(carousel, 2000); // Change image every 2 seconds
 }
 </script>
