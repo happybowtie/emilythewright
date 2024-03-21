@@ -201,7 +201,7 @@ I'm a filmmaker from Denver, Colorado.
 
     <!-- Grid for photos -->
    <div class="w3-row-padding" style="margin:0 -16px">
-      <div class="w3-half">
+      <div class="slideshow-container w3-half" data-cycle="2000">
 	
   <img class="mySlides" src="cfswin.png" style="width:100%">
   <img class="mySlides" src="cfsnom.png" style="width:100%">
@@ -211,7 +211,7 @@ I'm a filmmaker from Denver, Colorado.
  
     
 	    
-      <div class="w3-half">
+      <div  class="slideshow-container w3-half" data-cycle="2000">
 	   
   <img class="mySlides2" src="visposter@0.5x.jpg" style="width:100%">
   <img class="mySlides2" src="cfsnom.png" style="width:100%">
@@ -220,38 +220,37 @@ I'm a filmmaker from Denver, Colorado.
 </div>
    </div>
       </div>
-
 <script>
-var myIndex = 0;
-carousel();
+/* Find all slideshow containers */
+var slideshowContainers = document.getElementsByClassName("slideshow-container");
+/* For each container get starting variables */
+for(let s = 0; s < slideshowContainers.length; s++) {
+    /* Read the new data attribute */        
+    var cycle = slideshowContainers[s].dataset.cycle;
+    /* Find all the child nodes with class mySlides */
+    var slides = slideshowContainers[s].querySelectorAll('.mySlides');
+    var slideIndex = 0;
+    /* Now we can cycle slides, but this recursive function must have parameters */
+    /* slides and cycle never change, those are unique for each slide container */
+    /* slideIndex will increase during each iteration */
+    showSlides(slides, slideIndex, cycle);
+};
 
-function carousel() {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";  
-  }
-  myIndex++;
-  if (myIndex > x.length) {myIndex = 1}    
-  x[myIndex-1].style.display = "block";  
-  setTimeout(carousel, 2000); // Change image every 2 seconds
-}
-</script>
-	  <script>
-var tylersIndex = 0;
-carousel();
-
-function carousel() {
-  var i;
-  var x = document.getElementsByClassName("mySlides2");
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";  
-  }
-  tylersIndex++;
-  if (tylersIndex > x.length) {tylersIndex = 1}    
-  x[tylersIndex-1].style.display = "block";  
-  setTimeout(carousel, 2000); // Change image every 2 seconds
-}
+/* Function is alsmost same, but now it uses 3 new parameters */
+function showSlides(slides, slideIndex, cycle) {
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    };
+    slideIndex++;
+    if (slideIndex > slides.length) {
+        slideIndex = 1
+    };
+    slides[slideIndex - 1].style.display = "block";
+    /* Calling same function, but with new parameters and cycle time */
+    setTimeout(function() {
+        showSlides(slides, slideIndex, cycle)
+    }, cycle);
+};
 </script>
 
 	  
