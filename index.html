@@ -153,7 +153,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 
   <!-- About Section -->
   <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
-    <h2 class="w3-text-deep-purple">LETS  MAKE  SOMETHING  COOL  TOGETHER</h2>
+    <h2 class="w3-text-deep-purple">LETS MAKE SOMETHING COOL TOGETHER</h2>
     <hr style="width:200px" class="w3-opacity">
     <p>
 I'm a filmmaker from Denver, Colorado.
@@ -195,11 +195,17 @@ I'm a filmmaker from Denver, Colorado.
         Dollars spent on video equipment
       </div>
     </div> -->
-	  <div class="w3-content w3-section" style="max-width:10px, max-height:10px">
-  <img class="mySlides" src="cfswin" style="width:100%">
-  <img class="mySlides" src="cfsnom" style="width:100%">
-  <img class="mySlides" src="DIFF" style="width:100%">
-		  <img class="mySlides" src="DUFF" style="width:100%">
+	  <div class="w3-content w3-section w3-half" style="max-width:500px">
+  <img class="mySlides1" src="cfswin" style="width:100%">
+  <img class="mySlides1" src="cfsnom" style="width:100%">
+  <img class="mySlides1" src="DIFF" style="width:100%">
+		  <img class="mySlides1" src="DUFF" style="width:100%">
+</div>
+	    <div class="w3-content w3-section w3-half" style="max-width:500px">
+  <img class="mySlides2" src="cfswin" style="width:100%">
+  <img class="mySlides2" src="cfsnom" style="width:100%">
+  <img class="mySlides2" src="DIFF" style="width:100%">
+		  <img class="mySlides2" src="DUFF" style="width:100%">
 </div>
 
 <script>
@@ -208,7 +214,7 @@ carousel();
 
 function carousel() {
   var i;
-  var x = document.getElementsByClassName("mySlides");
+  var x = document.getElementsByClassName("mySlides1", "mySlides2");
   for (i = 0; i < x.length; i++) {
     x[i].style.display = "none";  
   }
